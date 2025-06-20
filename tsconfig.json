@@ -16,7 +16,8 @@
   "module": "preserve",
   "baseUrl": "src",
   "paths": {
-    "modeli/*": ["app/modeli/*"]
+    "modeli/*": ["app/modeli/*"],
+    "@filmovi": ["app/komponente/filmovi"],
   }
 },
 

@@ -5,13 +5,17 @@
     "types": [],
     "baseUrl": "./",
     "paths": {
-      "modeli/*": ["app/modeli/*"]
+      "modeli/*": ["app/modeli/*"],
+       "app/*": ["app/*"]
+      
     }
   },
   "files": [
     "src/main.ts",
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+   
+
   ]
 }

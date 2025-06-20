@@ -4,3 +4,10 @@
   <a href="/korpa" class="dugme">🛒 Korpa</a>
   <a href="/onama" class="dugme">ℹ️ O nama</a>
 </div>
+
+<h2>Nasumični film dana</h2>
+<div *ngIf="randomFilm">
+  <h3>{{ randomFilm.naziv }}</h3>
+  <img [src]="randomFilm.slika" alt="{{ randomFilm.naziv }}" width="200" />
+  <p>{{ randomFilm.opis }}</p>
+</div>

@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Film } from '../../modeli/film.model';
+import { sviFilmovi } from '../../komponente/filmovi';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-pocetna',
-  imports: [],
   templateUrl: './pocetna.html',
-  styleUrl: './pocetna.scss'
+  styleUrl: './pocetna.scss',
+  standalone: true,
+  imports: [NgIf]
 })
-export class Pocetna {
+export class Pocetna implements OnInit {
+  randomFilm!: Film;
 
+  ngOnInit() {
+    const randomIndex = Math.floor(Math.random() * sviFilmovi.length);
+    this.randomFilm = sviFilmovi[randomIndex];
+  }
 }
