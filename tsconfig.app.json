@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "baseUrl": "./",
+    "paths": {
+      "modeli/*": ["app/modeli/*"]
+    }
+  },
+  "files": [
+    "src/main.ts",
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}

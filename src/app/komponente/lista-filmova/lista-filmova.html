@@ -1,0 +1,37 @@
+<div class="dugmici-container">
+  <a href="/pocetna" class="dugme">🏠 Početna</a>
+  <a href="/profil" class="dugme">👤 Profil</a>
+  <a href="/korpa" class="dugme">🛒 Korpa</a>
+  <a href="/onama" class="dugme">ℹ️ O nama</a>
+</div>
+
+
+
+
+
+<div *ngFor="let film of filmovi" class="film-kartica">
+  <img [src]="film?.slika" alt="{{ film?.naziv }}" width="150" />
+  <h3>{{ film.naziv }} ({{ film.datumIzlaska }})</h3>
+  <p><strong>Žanr:</strong> {{ film.zanr }}</p>
+  <p><strong>Trajanje:</strong> {{ film.trajanje }} min</p>
+  <p><strong>Režiser:</strong> {{ film.autor }}</p>
+  <p><strong>Glumci:</strong> {{ film.glumci.join(', ') }}</p>
+  <p>{{ film.opis }}</p>
+  <p><strong>Cena:</strong> {{ film.cena }} RSD</p>
+  <p><strong>Prosečna ocena:</strong> {{ getProsecnaOcena(film) | number:'1.1-2' }} / 5</p>
+
+  <div *ngIf="film.recenzije.length > 0">
+    <h4>Recenzije:</h4>
+    <ul>
+      <li *ngFor="let rec of film.recenzije">
+        ⭐ {{ rec.ocena }} - "{{ rec.komentar }}" <i>({{ rec.korisnik }})</i>
+      </li>
+    </ul>
+  </div>
+  <div *ngFor="let film of filmovi" class="film-kartica">
+  
+
+</div>
+
+  <hr />
+</div>

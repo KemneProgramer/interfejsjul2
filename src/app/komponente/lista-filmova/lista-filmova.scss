@@ -1,0 +1,27 @@
+.dugmici-container {
+  display: flex;
+  flex-direction: row; 
+  gap: 12px;           
+  max-width: 100%;     
+  margin-top: 20px;
+  flex-wrap: wrap;   
+  justify-content: center;  
+}
+
+.dugme {
+  display: block;
+  padding: 12px 20px;
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0d47a1;
+    cursor: pointer;
+  }
+}
