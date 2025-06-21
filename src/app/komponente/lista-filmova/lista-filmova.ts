@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Film } from '../../modeli/film.model';
 import { sviFilmovi } from '../filmovi';
+import { RezervacijeService } from '../../services/rezervacije-service';
 
 @Component({
   selector: 'app-lista-filmova',
@@ -52,4 +53,9 @@ export class ListaFilmova {
     const suma = film.recenzije.reduce((acc, r) => acc + r.ocena, 0);
     return suma / film.recenzije.length;
   }
+
+  rezervisiFilm(film: Film): void {
+    RezervacijeService.printFilm(film);
+  }
+  
 }
