@@ -26,3 +26,88 @@
     cursor: pointer;
   }
 }
+.lista-korpa {
+  max-width: 70%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+.lista-korpa h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.korpa-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.korpa-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #4e4e4e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.korpa-item:hover {
+  transform: scale(1.01);
+}
+
+.korpa-item h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #222;
+}
+
+.korpa-item p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.korpa-item button {
+  margin-right: 12px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #4e4e4e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.korpa-item button:hover {
+  background-color: #757575;
+}
+
+button[ng-reflect-name="kupiSve"],
+button:has-text("Prikaži ukupnu cenu") {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 24px;
+  background-color: #1b5e20;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[ng-reflect-name="kupiSve"]:hover {
+  background-color: #2e7d32;
+}
