@@ -16,7 +16,7 @@
         <p>Datum projekcije: {{ rezervacija.projekcije[0]?.datum | date:'dd.MM.yyyy' }}</p>
         <p>Vreme projekcije: {{ rezervacija.projekcije[0]?.vreme }}</p>
         <p>Sala: {{ rezervacija.sala }}</p>
-        <p>Cena: {{ rezervacija.cena | currency:'EUR':'symbol':'1.2-2' }}</p>
+        <p>Cena: {{ rezervacija.cena | currency:'RSD':'symbol':'1.2-2' }}</p>
 
         <button (click)="removeRezervacija(i)">Ukloni rezervaciju</button>
       </div>
