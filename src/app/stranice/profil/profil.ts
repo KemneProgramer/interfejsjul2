@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RezervacijeService } from '../../services/rezervacije-service';
+import { CommonModule } from '@angular/common';
 import { Film } from '../../modeli/film.model';
 
 @Component({
   selector: 'app-profil',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './profil.html',
   styleUrl: './profil.scss'
 })
