@@ -5,17 +5,29 @@
   <a href="/onama" class="dugme">ℹ️ O nama</a>
 </div>
 
-<div style="margin-bottom: 20px;">
-  <input type="text" [(ngModel)]="pretraga" placeholder="Pretraži po nazivu..." />
+<div class="filteri" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+  <input type="text" [(ngModel)]="pretraga" placeholder="🔍 Pretraži po nazivu..." style="flex:1; min-width: 180px;" />
 
-  <select [(ngModel)]="odabraniZanr">
-    <option value="">Svi žanrovi</option>
+  <select [(ngModel)]="odabraniZanr" style="min-width: 160px;">
+    <option value="">🎞️ Svi žanrovi</option>
     <option *ngFor="let zanr of sviZanrovi" [value]="zanr">{{ zanr }}</option>
+  </select>
+
+  <select [(ngModel)]="minimalnaOcena" style="min-width: 130px;">
+    <option [value]="0">⭐ Sve ocene</option>
+    <option *ngFor="let ocena of ocene" [value]="ocena">{{ ocena }}+</option>
+  </select>
+
+  <select [(ngModel)]="trajanjeFilter" style="min-width: 160px;">
+    <option value="">⏱️ Sve dužine</option>
+    <option value="kratko">Kraće od 2 sata</option>
+    <option value="dugo">Duže od 2 sata</option>
   </select>
 </div>
 
-<div *ngFor="let film of filtriraniFilmovi" class="film-kartica">
-  <img [src]="film.slika" alt="{{ film.naziv }}" width="150" />
+<div *ngFor="let film of filtriraniFilmovi" class="film-kartica" style="border: 1px solid #ccc; margin-bottom: 20px; padding: 15px; border-radius: 5px;">
+  <img [src]="film.slika" alt="{{ film.naziv }}" width="150" style="float:left; margin-right: 15px; border-radius: 4px;" />
+
   <h3>{{ film.naziv }} ({{ film.datumIzlaska }})</h3>
   <p><strong>Žanr:</strong> {{ film.zanr }}</p>
   <p><strong>Trajanje:</strong> {{ film.trajanje }} min</p>
@@ -34,5 +46,6 @@
     </ul>
   </div>
 
+  <div style="clear: both;"></div>
   <hr />
 </div>
