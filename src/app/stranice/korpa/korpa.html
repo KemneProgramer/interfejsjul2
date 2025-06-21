@@ -1,6 +1,25 @@
-<div class="dugmici-container">
-  <a href="/filmovi" class="dugme">🎬 Filmovi</a>
-  <a href="/profil" class="dugme">👤 Profil</a>
-  <a href="/pocetna" class="dugme">🏠 Pocetna</a>
-  <a href="/onama" class="dugme">ℹ️ O nama</a>
+<div>
+
+  <div class="dugmici-container">
+    <a href="/pocetna" class="dugme">🏠 Početna</a>
+    <a href="/filmovi" class="dugme">🎬 Filmovi</a>
+    <a href="/korpa" class="dugme">🛒 Korpa</a>
+    <a href="/onama" class="dugme">ℹ️ O nama</a>
+  </div>
+
+  <section class="lista-korpa">
+    <h2>Moja korpa</h2>
+    <div class="korpa-container">
+      <div class="korpa-item" *ngFor="let film of getKorpa(); let i = index">
+        <h3>{{ film.naziv }}</h3>
+        <p>Žanr: {{ film.zanr }}</p>
+        <p>Trajanje: {{ film.trajanje }} min</p>
+        <p>Datum izlaska: {{ film.datumIzlaska | date:'dd.MM.yyyy' }}</p>
+        <p>Cena: {{ film.cena | currency:'EUR':'symbol':'1.2-2' }}</p>
+
+        <button (click)="removeIzKorpe(i)">Ukloni iz korpe</button>
+      </div>
+    </div>
+  </section>
+
 </div>
