@@ -1,27 +1,128 @@
+html {
+  background-color: #9A9A9A; 
+  margin: 0;
+  padding:0;
+}
+
+head {
+  background-color: #9A9A9A; 
+  margin: 0;
+  padding:0;
+}
+
+body {
+  background-color: #dcdcdc; 
+  margin: 0;
+  padding:0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #9A9A9A;  
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #aaa;
+}
+
+.naslov {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+.filmovi-stranica {
+  background-color: #ffffff;
+  margin: 30px 15%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.navigacija-box {
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
 .dugmici-container {
   display: flex;
-  flex-direction: row; 
-  gap: 12px;           
-  max-width: 100%;     
-  margin-top: 20px;
-  flex-wrap: wrap;   
-  justify-content: center;  
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .dugme {
-  display: block;
-  padding: 12px 20px;
+  padding: 10px 18px;
   background-color: #1976d2;
-  color: white;
-  text-align: center;
+  color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  user-select: none;
   transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #0d47a1;
-    cursor: pointer;
+  }
+}
+
+.filteri-box {
+  background-color: #f5f5f5;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  input,
+  select {
+    padding: 6px 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+  }
+}
+
+.lista-filmova-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.film-kartica {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  img {
+    border-radius: 6px;
+    object-fit: cover;
+    height: 200px;
+    width: 150px;
+  }
+
+  .film-info {
+    flex-grow: 1;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 3px 0;
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
   }
 }
