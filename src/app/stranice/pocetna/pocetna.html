@@ -5,9 +5,25 @@
   <a href="/onama" class="dugme">ℹ️ O nama</a>
 </div>
 
-<h2>Nasumični film dana</h2>
+<div class="carousel">
+  <button (click)="prethodna()">←</button>
+
+  <img [src]="slike[trenutnaSlika]" alt="Slika iz filma" width="400" height="300" />
+
+  <button (click)="sledeca()">→</button>
+</div>
+
+
+
+
+
+
+
+<h2>Novo u bioskopu</h2>
 <div *ngIf="randomFilm">
   <h3>{{ randomFilm.naziv }}</h3>
   <img [src]="randomFilm.slika" alt="{{ randomFilm.naziv }}" width="200" />
   <p>{{ randomFilm.opis }}</p>
 </div>
+
+
