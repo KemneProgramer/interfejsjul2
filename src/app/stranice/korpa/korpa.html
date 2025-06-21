@@ -18,6 +18,7 @@
         <p>Cena: {{ film.cena | currency:'EUR':'symbol':'1.2-2' }}</p>
 
         <button (click)="removeIzKorpe(i)">Ukloni iz korpe</button>
+        <button (click)="rezervisiFilm(film, i)">Rezervisi film</button>
       </div>
     </div>
   </section>

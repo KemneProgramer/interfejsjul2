@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Film } from '../../modeli/film.model';
 import { Korpa as KorpaService } from '../../services/korpa';
+import { RezervacijeService } from '../../services/rezervacije-service';
 import { CommonModule } from '@angular/common';
 
 
@@ -18,5 +19,10 @@ export class Korpa {
 
   removeIzKorpe(index: number): void {
     KorpaService.removeIzKorpe(index);
+  }
+
+  rezervisiFilm(film: Film, index: number): void {
+    RezervacijeService.dodajRezervaciju(film);
+    this.removeIzKorpe(index);
   }
 }

@@ -7,7 +7,7 @@ import { Film } from '../modeli/film.model';
 export class RezervacijeService {
   static rezervacije: Film[] = [];
 
-  static printFilm(film: Film): void {
+  static dodajRezervaciju(film: Film): void {
     const postoji = this.rezervacije.some(f => f.naziv === film.naziv && f.datumIzlaska === film.datumIzlaska);
 
     if(!postoji){
