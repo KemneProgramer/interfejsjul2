@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Film } from '../../modeli/film.model';
 import { sviFilmovi } from '../filmovi';
 import { RezervacijeService } from '../../services/rezervacije-service';
+import { Korpa as KorpaService } from '../../services/korpa';
 
 @Component({
   selector: 'app-lista-filmova',
@@ -54,8 +55,7 @@ export class ListaFilmova {
     return suma / film.recenzije.length;
   }
 
-  rezervisiFilm(film: Film): void {
-    RezervacijeService.printFilm(film);
+  dodajUKorpu(film: Film): void {
+    KorpaService.dodajUKorpu(film);
   }
-  
 }

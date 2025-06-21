@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Film } from '../../modeli/film.model';
 import { Korpa as KorpaService } from '../../services/korpa';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-korpa',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './korpa.html',
   styleUrl: './korpa.scss'
 })

@@ -6,7 +6,7 @@ import { Film } from '../modeli/film.model';
 })
 export class Korpa {
 
-  static korpa: Film[];
+  static korpa: Film[] = [];
 
   static getKorpa(): Film[] {
     const data = sessionStorage.getItem('korpa');
