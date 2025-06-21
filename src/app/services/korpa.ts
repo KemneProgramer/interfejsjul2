@@ -36,6 +36,9 @@ export class Korpa {
       this.korpa.splice(index, 1);
       sessionStorage.setItem('korpa', JSON.stringify(this.korpa));
     }
+    else{
+      console.error('Indeks van granica: ', index);
+    }
   }
 
 
