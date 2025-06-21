@@ -1,17 +1,54 @@
+html {
+  background-color: #9A9A9A; 
+  margin: 0;
+  padding:0;
+}
+
+head {
+  background-color: #9A9A9A; 
+  margin: 0;
+  padding:0;
+}
+.header {
+  background-color: #9A9A9A;  
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #aaa;
+}
+
+.naslov-header {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+
+.naslov {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+
 .dugmici-container {
   display: flex;
-  flex-direction: row; 
-  gap: 12px;           
-  max-width: 100%;     
+  flex-direction: row;
+  gap: 12px;
+  max-width: 100%;
   margin-top: 20px;
-  flex-wrap: wrap;   
-  justify-content: center;  
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .dugme {
   display: block;
   padding: 12px 20px;
-  background-color: #1976d2;
+  background-color: #4e4e4e;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -21,7 +58,49 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0d47a1;
+    background-color: #757575;
     cursor: pointer;
   }
+}
+
+
+
+.onama-container {
+  margin: 0 auto;
+  max-width: 70%;
+  padding: 30px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.naslov {
+  text-align: center;
+  font-size: 36px;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.opis-box,
+.info-box,
+.kontakt-box {
+  background-color: #9a9a9a;
+  color: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+.opis-box p {
+  margin-bottom: 12px;
+}
+
+.kontakt-box p,
+.info-box p {
+  margin: 6px 0;
 }

@@ -8,10 +8,11 @@
   justify-content: center;  
 }
 
+
 .dugme {
   display: block;
   padding: 12px 20px;
-  background-color: #1976d2;
+  background-color: #4e4e4e;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -21,9 +22,10 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0d47a1;
+    background-color: #757575;
     cursor: pointer;
   }
+}
 
 .carousel {
   
@@ -56,4 +58,3 @@
   background-color: #222;
 }
 
-}
