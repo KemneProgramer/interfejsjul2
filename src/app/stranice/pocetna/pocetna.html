@@ -1,29 +1,34 @@
-<div class="dugmici-container">
+<html>
+<header class="header">
+  <h1 class="naslov-header">Singibioskop</h1>
+</header>
+<nav class="dugmici-container">
   <a href="/filmovi" class="dugme">🎬 Filmovi</a>
   <a href="/profil" class="dugme">👤 Profil</a>
   <a href="/korpa" class="dugme">🛒 Korpa</a>
   <a href="/onama" class="dugme">ℹ️ O nama</a>
+</nav>
+
+<div class="pocetna-container">
+
+  <div class="carousel-box">
+    <div class="carousel">
+      <button (click)="prethodna()">←</button>
+      <img [src]="slike[trenutnaSlika]" alt="Slika iz filma" width="400" height="300" />
+      <button (click)="sledeca()">→</button>
+    </div>
+  </div>
+
+  <section class="nova-sekcija" *ngIf="randomFilm">
+    <h2>🎞️ Novo u bioskopu</h2>
+    <div class="novi-film-box">
+      <img [src]="randomFilm.slika" alt="{{ randomFilm.naziv }}" />
+      <div class="opis">
+        <h3>{{ randomFilm.naziv }}</h3>
+        <p>{{ randomFilm.opis }}</p>
+      </div>
+    </div>
+  </section>
+
 </div>
-
-<div class="carousel">
-  <button (click)="prethodna()">←</button>
-
-  <img [src]="slike[trenutnaSlika]" alt="Slika iz filma" width="400" height="300" />
-
-  <button (click)="sledeca()">→</button>
-</div>
-
-
-
-
-
-
-
-<h2>Novo u bioskopu</h2>
-<div *ngIf="randomFilm">
-  <h3>{{ randomFilm.naziv }}</h3>
-  <img [src]="randomFilm.slika" alt="{{ randomFilm.naziv }}" width="200" />
-  <p>{{ randomFilm.opis }}</p>
-</div>
-
-
+</html>
