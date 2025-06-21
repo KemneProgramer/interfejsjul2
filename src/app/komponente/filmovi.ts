@@ -40,7 +40,7 @@ export const sviFilmovi: Film[] = [
       { korisnik: 'Ana', komentar: 'Omiljeni deo kad Maras opet ubije 15 ljudi!', ocena: 5 },
       { korisnik: 'Marko', komentar: 'Ja sam opet bukvalno Baca', ocena: 4 }
     ],
-    slika: 'assets/slike/maras.jpg'
+    slika: 'assets/slike/maras2.jpg'
   },
 
 

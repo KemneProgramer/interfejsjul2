@@ -5,12 +5,17 @@
   <a href="/onama" class="dugme">ℹ️ O nama</a>
 </div>
 
+<div style="margin-bottom: 20px;">
+  <input type="text" [(ngModel)]="pretraga" placeholder="Pretraži po nazivu..." />
 
+  <select [(ngModel)]="odabraniZanr">
+    <option value="">Svi žanrovi</option>
+    <option *ngFor="let zanr of sviZanrovi" [value]="zanr">{{ zanr }}</option>
+  </select>
+</div>
 
-
-
-<div *ngFor="let film of filmovi" class="film-kartica">
-  <img [src]="film?.slika" alt="{{ film?.naziv }}" width="150" />
+<div *ngFor="let film of filtriraniFilmovi" class="film-kartica">
+  <img [src]="film.slika" alt="{{ film.naziv }}" width="150" />
   <h3>{{ film.naziv }} ({{ film.datumIzlaska }})</h3>
   <p><strong>Žanr:</strong> {{ film.zanr }}</p>
   <p><strong>Trajanje:</strong> {{ film.trajanje }} min</p>
@@ -28,10 +33,6 @@
       </li>
     </ul>
   </div>
-  <div *ngFor="let film of filmovi" class="film-kartica">
-  
-
-</div>
 
   <hr />
 </div>
