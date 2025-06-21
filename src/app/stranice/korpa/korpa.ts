@@ -3,8 +3,6 @@ import { Film } from '../../modeli/film.model';
 import { Korpa as KorpaService } from '../../services/korpa';
 import { RezervacijeService } from '../../services/rezervacije-service';
 import { CommonModule } from '@angular/common';
-import { RezervacijeService } from '../../services/rezervacije-service';
-
 
 @Component({
   selector: 'app-korpa',
