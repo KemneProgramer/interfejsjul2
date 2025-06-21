@@ -26,7 +26,10 @@ export class RezervacijeService {
   }
 
   static removeRezervacija(index: number): void {
-    this.rezervacije.splice(index, 1);
+    this.rezervacije = this.getRezervacije();
+    if (index >= 0 && index < this.rezervacije.length) {
+      this.rezervacije.splice(index, 1);
+    }
     sessionStorage.setItem('rezervacije', JSON.stringify(this.rezervacije));
   }
 
